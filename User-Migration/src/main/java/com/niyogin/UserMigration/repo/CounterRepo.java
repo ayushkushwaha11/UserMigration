@@ -11,10 +11,13 @@ import org.springframework.stereotype.Repository;
 public interface CounterRepo extends JpaRepository<Counter,Long> {
     @Modifying
     @Query("UPDATE Counter c SET c.currentid = c.currentid + 100 WHERE c.name = :name")
-    int incrementCounter(@Param("name") String name);
+    void incrementCounter(@Param("name") String name);
 
     @Query("SELECT c FROM Counter c WHERE c.name =:name")
     Counter findByName(@Param("name") String name);
+
+//    @Query("SELECT c.currentid FROM Counter c WHERE c.name = 'com.liferay.counter.kernel.model.Counter'")
+//    Long findCurrentIdByName
 
 
 }

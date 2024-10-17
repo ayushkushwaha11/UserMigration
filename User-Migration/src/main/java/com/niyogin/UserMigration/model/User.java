@@ -1,12 +1,11 @@
 package com.niyogin.UserMigration.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -17,10 +16,10 @@ public class User {
 
     @Id
     @Column(name = "userid")
-    private long userid;
+    private int userid;
 
     @Column(name = "createdate")
-    private String createdate;
+    private LocalDateTime createdate;
 
     @Column(name = "screenname")
     private String screenname;

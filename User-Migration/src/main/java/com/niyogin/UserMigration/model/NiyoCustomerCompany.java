@@ -14,19 +14,19 @@ public class NiyoCustomerCompany {
 
     @Id
     @Column(name = "niyocustomercompanyid")
-    private long niyoCustomerCompanyId;
+    private int niyoCustomerCompanyId;
 
     @Column(name = "companyname")
     private String companyName;
 
     @Column(name = "pincode")
-    private long pincode;
+    private String pincode;
 
     @Column(name = "industrytype")
-    private long industryType;
+    private String industryType;
 
     @Column(name = "industrysubtype")
-    private long industrySubType;
+    private String industrySubType;
 
     @Column(name = "mobileno")
     private String  mobileNo;
@@ -35,6 +35,6 @@ public class NiyoCustomerCompany {
     private String email;
 
     @Column(name = "niyopartnercompanyid")
-    private long niyoPartnerCompanyId;
+    private int niyoPartnerCompanyId;
 
 }

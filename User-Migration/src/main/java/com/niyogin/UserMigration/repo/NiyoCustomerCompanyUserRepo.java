@@ -1,0 +1,10 @@
+package com.niyogin.UserMigration.repo;
+
+import com.niyogin.UserMigration.model.NiyoCustomerCompanyUser;
+import com.niyogin.UserMigration.model.NiyoUserDetails;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface NiyoCustomerCompanyUserRepo extends JpaRepository<NiyoCustomerCompanyUser,Long> {
+}

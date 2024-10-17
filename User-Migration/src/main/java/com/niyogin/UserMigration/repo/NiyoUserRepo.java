@@ -7,9 +7,11 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface NiyoUserRepo extends JpaRepository<NiyoUser,Long> {
 
     @Query("SELECT c FROM NiyoUser c WHERE c.email =:email")
-    String findByEmail(@Param("email") String email);
+    List<NiyoUser> findByEmail(@Param("email") String email);
 }

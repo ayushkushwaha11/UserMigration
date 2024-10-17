@@ -18,9 +18,12 @@ public interface NiyoCustomerCompanyRepo extends JpaRepository<NiyoCustomerCompa
     @Query("SELECT U FROM NiyoCustomerCompany U WHERE U.niyoCustomerCompanyId =:n")
     NiyoCustomerCompany getCustomerCompanyByCustomerId(@Param("n") Long niyoCustomerCompanyId);
 
-    @Query("SELECT c FROM NiyoCustomerCompany c WHERE c.email =:email")
+    @Query("SELECT c FROM NiyoCustomerCompany c WHERE c.email =:email ORDER BY c.id ASC")
     NiyoCustomerCompany findByEmail(@Param("email") String email);
 
+//    @Modifying
+//    @Query("DELETE FROM NiyoCustomerCompany U WHERE U.niyoCustomerCompanyId = :n")
+//    int deleteCustomerById(@Param("n") Long niyoCustomerCompanyId);
 
 }
 
